@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>便利ツール 利用規約</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
 <script type="importmap">
 {
   "imports": {
@@ -14,7 +26,8 @@
     "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "vite": "https://aistudiocdn.com/vite@^7.2.4",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@tailwindcss/typography": "https://aistudiocdn.com/@tailwindcss/typography@^0.5.19"
   }
 }
 </script>

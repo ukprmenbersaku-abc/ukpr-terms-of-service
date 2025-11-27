@@ -35,7 +35,7 @@ const TosPixMorph: React.FC = () => {
             第1条（本ツールの提供者及び定義）
           </h2>
           <ol className="list-decimal list-inside space-y-3 pl-2">
-            <li>本ツールの提供者は、<strong>UKPR</strong>とします。</li>
+            <li>本ツールの提供者は、<strong>UKPR(userkunn)</strong>とします。</li>
             <li>本ツールは、利用者のブラウザ上で画像を変換およびリサイズ処理する機能を提供します。</li>
           </ol>
         </section>
