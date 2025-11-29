@@ -80,7 +80,12 @@ const TosPixMorph: React.FC = () => {
             <span className="bg-indigo-100 text-indigo-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
             第4条（利用料金）
           </h2>
-          <p className="pl-2">本ツールの利用は、<strong>無料</strong>とします。</p>
+          <div className="pl-2 space-y-3">
+            <p>本ツールの利用は、<strong>無料</strong>とします。</p>
+            <p className="text-emerald-600 font-bold bg-emerald-50 inline-block px-4 py-2 rounded-lg border border-emerald-100">
+              商用・非商用問わず完全無料でご利用いただけます。
+            </p>
+          </div>
         </section>
 
         <section>
@@ -134,15 +139,6 @@ const TosPixMorph: React.FC = () => {
             </div>
           </div>
         </section>
-        
-        <div className="flex justify-center mt-12 pt-8 border-t border-gray-100">
-          <button 
-            onClick={() => window.history.back()}
-            className="text-indigo-600 font-semibold hover:text-indigo-800 transition-colors flex items-center"
-          >
-            同意して戻る
-          </button>
-        </div>
       </div>
     </div>
   );

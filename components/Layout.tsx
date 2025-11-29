@@ -9,12 +9,16 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  
+  // カラーパレットのページは幅広レイアウトにする
+  const isWideLayout = location.pathname === '/tos/color-palette';
+  const maxWidthClass = isWideLayout ? 'max-w-7xl' : 'max-w-4xl';
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between transition-all duration-300`}>
           <div className="flex items-center gap-2">
             {!isHome && (
               <Link 
@@ -34,13 +38,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <main className={`flex-grow w-full ${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 transition-all duration-300`}>
         {children}
       </main>
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-auto">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500">
+        <div className={`${maxWidthClass} mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500 transition-all duration-300`}>
           <p>&copy; {new Date().getFullYear()} UKPR. All rights reserved.</p>
         </div>
       </footer>
