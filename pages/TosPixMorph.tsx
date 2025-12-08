@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, CheckCircle, AlertTriangle, Shield } from 'lucide-react';
+import { Image, CheckCircle, AlertTriangle, Shield, ExternalLink } from 'lucide-react';
 
 const TosPixMorph: React.FC = () => {
   return (
@@ -14,8 +14,21 @@ const TosPixMorph: React.FC = () => {
             画像変換ツール
           </span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2">PixMorph 利用規約</h1>
-        <p className="text-blue-100 text-lg opacity-90">
+        
+        <a 
+          href="https://ukpr-image10.pages.dev/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 group mb-2 hover:opacity-95 transition-opacity"
+          title="PixMorphを開く"
+        >
+          <h1 className="text-3xl sm:text-4xl font-bold group-hover:underline decoration-2 underline-offset-4">
+            PixMorph 利用規約
+          </h1>
+          <ExternalLink className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" size={28} />
+        </a>
+
+        <p className="text-blue-100 text-lg opacity-90 mt-1">
           最終更新日: {new Date().toLocaleDateString('ja-JP')}
         </p>
       </div>

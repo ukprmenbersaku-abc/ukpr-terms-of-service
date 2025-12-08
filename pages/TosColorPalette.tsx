@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Globe, AlertTriangle, Copyright, ShieldAlert, RefreshCw, CheckCircle, Scale } from 'lucide-react';
+import { Palette, Globe, AlertTriangle, Copyright, ShieldAlert, RefreshCw, CheckCircle, Scale, ExternalLink } from 'lucide-react';
 
 const TosColorPalette: React.FC = () => {
   return (
@@ -15,9 +15,20 @@ const TosColorPalette: React.FC = () => {
               デザインツール
             </span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
-            カラーパレット作成ツール<br/>利用規約
-          </h1>
+          
+          <a 
+            href="https://color-palette-tool.pages.dev/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-start gap-3 group mb-4 hover:opacity-95 transition-opacity"
+            title="ツールを開く"
+          >
+            <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight group-hover:underline decoration-2 underline-offset-4">
+              カラーパレット作成ツール<br/>利用規約
+            </h1>
+            <ExternalLink className="mt-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 flex-shrink-0" size={28} />
+          </a>
+
           <p className="text-indigo-100 text-lg opacity-90 font-medium">
             最終更新日: {new Date().toLocaleDateString('ja-JP')}
           </p>
