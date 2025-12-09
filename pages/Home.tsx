@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Image, Palette, FileText, ArrowRight } from 'lucide-react';
+import { Image, Palette, FileText, ArrowRight, Database } from 'lucide-react';
 import { ToolItem } from '../types';
 
 const tools: ToolItem[] = [
@@ -19,6 +19,14 @@ const tools: ToolItem[] = [
     path: '/tos/color-palette',
     icon: Palette,
     color: 'bg-purple-100 text-purple-600',
+  },
+  {
+    id: 'sqlite',
+    name: 'SQLite Studio',
+    description: 'ブラウザ上で動作するSQLiteデータベース閲覧・編集ツール。',
+    path: '/tos/sqlite',
+    icon: Database,
+    color: 'bg-emerald-100 text-emerald-600',
   }
 ];
 
