@@ -5,7 +5,7 @@ const TosColorPalette: React.FC = () => {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header Banner */}
-      <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 px-6 py-12 sm:px-12 text-white">
+      <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 px-5 py-12 sm:px-[26px] text-white">
         <div className="max-w-4xl mr-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="p-2.5 bg-white/20 rounded-xl backdrop-blur-md shadow-inner border border-white/10">
@@ -36,7 +36,7 @@ const TosColorPalette: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="px-6 py-8 sm:px-12 sm:py-16 space-y-12 text-gray-700 leading-relaxed">
+      <div className="px-5 py-10 sm:px-[26px] sm:py-16 space-y-12 text-gray-700 leading-relaxed">
         
         {/* Intro */}
         <div className="max-w-4xl mx-auto">

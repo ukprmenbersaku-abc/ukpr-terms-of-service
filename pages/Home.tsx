@@ -6,7 +6,7 @@ import { ToolItem } from '../types';
 const tools: ToolItem[] = [
   {
     id: 'pixmorph',
-    name: 'PixMorph',
+    name: 'Pix Morph',
     description: 'ブラウザ上で完結するセキュアな画像変換・リサイズツール。',
     path: '/tos/pixmorph',
     icon: Image,

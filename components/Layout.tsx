@@ -10,9 +10,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
   
-  // カラーパレットのページは幅広レイアウトにする
-  const isWideLayout = location.pathname === '/tos/color-palette';
-  const maxWidthClass = isWideLayout ? 'max-w-7xl' : 'max-w-4xl';
+  // 全ページで幅を統一する
+  const maxWidthClass = 'max-w-4xl';
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans">
