@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Image, Palette, FileText, ArrowRight, Database } from 'lucide-react';
+import { Image, Palette, FileText, ArrowRight, Database, Scale, ShieldCheck } from 'lucide-react';
 import { ToolItem } from '../types';
 
 const tools: ToolItem[] = [
@@ -38,9 +38,45 @@ const Home: React.FC = () => {
           利用規約を選択してください
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          各便利ツールの利用規約をご確認いただけます。
-          ご利用前に必ずお読みください。
+          UKPR-S便利ツール集の各利用規約をご確認いただけます。<br/>
+          すべてのツールに「共通利用規約」が適用されます。
         </p>
+      </div>
+
+      <div className="max-w-4xl mx-auto mb-8">
+        <Link 
+            to="/tos/general"
+            className="group relative block bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl hover:bg-slate-900 transition-all duration-300 overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Scale size={120} className="text-white" />
+            </div>
+            
+            <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="bg-white/10 p-4 rounded-xl text-white backdrop-blur-sm">
+                  <Scale size={32} />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-0.5 rounded shadow-sm">重要</span>
+                    <span className="text-slate-300 text-sm font-medium">すべての利用者へ</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    共通利用規約
+                  </h3>
+                  <p className="text-slate-300 max-w-xl">
+                    UKPR-S便利ツール集全体に適用される基本ルールです。各ツールの利用前に必ずご確認ください。
+                  </p>
+                </div>
+              </div>
+              
+              <div className="mt-2 sm:mt-0 flex items-center bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-slate-100 transition-colors self-start sm:self-center">
+                規約を読む
+                <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -68,7 +104,7 @@ const Home: React.FC = () => {
             
             <div className="mt-6 pt-4 border-t border-gray-50 flex items-center text-sm font-medium text-gray-500 group-hover:text-indigo-600 transition-colors">
               <FileText size={16} className="mr-2" />
-              規約を読む
+              個別規約を読む
             </div>
           </Link>
         ))}

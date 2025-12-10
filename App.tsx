@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import TosPixMorph from './pages/TosPixMorph';
 import TosColorPalette from './pages/TosColorPalette';
 import TosSqliteStudio from './pages/TosSqliteStudio';
+import TosGeneral from './pages/TosGeneral';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/tos/general" element={<TosGeneral />} />
           <Route path="/tos/pixmorph" element={<TosPixMorph />} />
           <Route path="/tos/color-palette" element={<TosColorPalette />} />
           <Route path="/tos/sqlite" element={<TosSqliteStudio />} />
