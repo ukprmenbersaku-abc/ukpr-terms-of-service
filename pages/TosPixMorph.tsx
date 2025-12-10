@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, Shield, AlertTriangle, ExternalLink, Link as LinkIcon } from 'lucide-react';
+import { Shield, AlertTriangle, ExternalLink, Link as LinkIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PixMorphIcon from '../components/PixMorphIcon';
 
 const TosPixMorph: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const TosPixMorph: React.FC = () => {
         <div className="max-w-4xl mr-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="p-2.5 bg-white/20 rounded-xl backdrop-blur-md shadow-inner border border-white/10">
-              <Image size={36} className="text-white" />
+              <PixMorphIcon size={36} className="text-white" />
             </div>
             <span className="text-sm font-semibold bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm tracking-wide">
               画像変換ツール

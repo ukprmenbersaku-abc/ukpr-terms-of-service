@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Image, Palette, FileText, ArrowRight, Database, Scale, ShieldCheck } from 'lucide-react';
+import { Palette, FileText, ArrowRight, Database, Scale } from 'lucide-react';
 import { ToolItem } from '../types';
+import PixMorphIcon from '../components/PixMorphIcon';
 
 const tools: ToolItem[] = [
   {
@@ -9,8 +10,8 @@ const tools: ToolItem[] = [
     name: 'Pix Morph',
     description: 'ブラウザ上で完結するセキュアな画像変換・リサイズツール。',
     path: '/tos/pixmorph',
-    icon: Image,
-    color: 'bg-blue-100 text-blue-600',
+    icon: PixMorphIcon,
+    color: 'bg-transparent', // アイコン自体が背景を持つため透明に
   },
   {
     id: 'color-palette',
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
               <Scale size={120} className="text-white" />
             </div>
             
-            <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="bg-white/10 p-4 rounded-xl text-white backdrop-blur-sm">
                   <Scale size={32} />
@@ -71,7 +72,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mt-2 sm:mt-0 flex items-center bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-slate-100 transition-colors self-start sm:self-center">
+              <div className="mt-2 sm:mt-0 flex items-center bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-slate-100 transition-colors shrink-0">
                 規約を読む
                 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -87,8 +88,9 @@ const Home: React.FC = () => {
             className="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-indigo-100 transition-all duration-300 flex flex-col"
           >
             <div className="flex items-start justify-between mb-4">
-              <div className={`p-3 rounded-xl ${tool.color}`}>
-                <tool.icon size={32} />
+              <div className={`rounded-xl ${tool.id === 'pixmorph' ? 'p-0 overflow-hidden' : 'p-3'} ${tool.color}`}>
+                {/* PixMorphの場合はサイズを少し大きく調整、その他は標準 */}
+                <tool.icon size={tool.id === 'pixmorph' ? 58 : 32} />
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity text-indigo-500">
                 <ArrowRight size={24} />

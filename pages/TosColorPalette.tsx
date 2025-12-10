@@ -18,7 +18,7 @@ const TosColorPalette: React.FC = () => {
           </div>
           
           <a 
-            href="https://color-palette-tool.pages.dev/" 
+            href="https://ukpr-color-tool.pages.dev/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-start gap-3 group mb-4 hover:opacity-95 transition-opacity"
